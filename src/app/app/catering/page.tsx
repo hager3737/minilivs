@@ -29,9 +29,7 @@ export default function Catering () {
             })
         }
     })
-
-    
-        
+   
     
 
     const handleFormChange = (e: any) => {
@@ -45,12 +43,13 @@ export default function Catering () {
         console.log(formData)
 
     return (
-        <div className="flex flex-col gap-12 mx-40 mt-20">
-            <div className="flex justify-center underline">
-                <p>Vänligen fyll i formuläret nedan så återkommer vi så snabbt som möjligt!</p>
+        <div className="flex flex-col gap-12 mx-12 md:mx-40 mt-20 mb-20">
+            <div className="flex justify-center">
+                <p className="text-center font-calistoga">Vänligen fyll i formuläret nedan så återkommer vi så snabbt som möjligt!</p>
             </div>
             <div className="flex flex-col items-center">
                 <div className="">
+                    {createQuestion.isSuccess && <p className="text-green-600">Din offert har nu skickats in, tack!</p>}
                     <div>
                         <h1>Förnamn och efternamn:</h1>
                         <input name="fullName" value={formData.fullName} onChange={handleFormChange} className="border rounded-lg border-blue-900 px-1 outline-none"/>
@@ -67,7 +66,7 @@ export default function Catering () {
                         <h4>Vad du önskar beställa:</h4>
                         <textarea name="order" value={formData.order} onChange={handleFormChange} className="border rounded-lg border-blue-900 px-4 h-20 outline-none"/>
                     </div>
-                    <button onClick={() => createQuestion.mutate()}>Skicka in!</button>
+                    <button onClick={() => createQuestion.mutate()} className="bg-green-600 p-1 rounded-lg">Skicka in!</button>
                 </div>
             </div>
         </div>
