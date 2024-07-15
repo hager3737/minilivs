@@ -6,6 +6,8 @@ import { useState } from "react";
 
 export default function Catering () {
 
+    const [ showing, setShowing ] = useState(false);
+
     const [ formData, setFormData ] = useState({
         fullName: "",
         email: "",
@@ -40,7 +42,11 @@ export default function Catering () {
             }));
         }
 
-        console.log(formData)
+        const handleClick = () => {
+            setShowing(false);
+            createQuestion.mutate()
+
+        }
 
     return (
         <div className="flex flex-col gap-12 mx-12 md:mx-40 mt-20 mb-20">
@@ -49,6 +55,7 @@ export default function Catering () {
             </div>
             <div className="flex flex-col items-center">
                 <div className="">
+                    {showing === true && <p className="text-red-600 font-semibold">Vänligen fyll i all information!</p>}
                     {createQuestion.isSuccess && <p className="text-green-600">Din offert har nu skickats in, tack!</p>}
                     <div>
                         <h1>Förnamn och efternamn:</h1>
@@ -66,7 +73,12 @@ export default function Catering () {
                         <h4>Vad du önskar beställa:</h4>
                         <textarea name="order" value={formData.order} onChange={handleFormChange} className="border rounded-lg border-blue-900 px-4 h-20 outline-none"/>
                     </div>
-                    <button onClick={() => createQuestion.mutate()} className="bg-green-600 p-1 rounded-lg">Skicka in!</button>
+                    {formData.fullName.length < 1 || formData.email.length < 1 || formData.phoneNumber.length < 1 || formData.order.length < 1 ? 
+                        <button onClick={() => setShowing(true)} className="bg-red-600 p-1 rounded-lg">Skicka in!</button>
+                    :
+                    <button onClick={handleClick} className="bg-green-600 p-1 rounded-lg">Skicka in!</button>
+                    }
+                    
                 </div>
             </div>
         </div>
