@@ -23,6 +23,7 @@ export async function POST(request: NextRequest) {
       replyTo: formData.email,
       subject: formData.fullName + formData.phoneNumber,
       text: formData.order,
+      
     };
   
     await transporter.sendMail(mailOptions);
