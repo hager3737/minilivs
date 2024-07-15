@@ -1,10 +1,10 @@
 export default function Footer () {
     return(
-        <footer className="sticky bottom-0">
-            <div className="grid grid-cols-3 items-center h-36 py-4 px-20 bg-black">
+        <footer className="relative bottom-0">
+            <div className="grid grid-cols-3 items-center h-36 py-4 px-20 bg-gradient-to-r from-blue-950 to-red-700">
                 <div className="flex flex-col items-center px-20 text-white">
                     <p className="text-xl">Öppettider:</p>
-                    <p className="text-sm">Vardagar: 08-19</p>
+                    <p className="text-sm">Vardagar: 08-20</p>
                     <p className="text-sm">Helger: 09-18</p>
                 </div>
                 <div className="flex flex-col items-center px-20 text-white">
@@ -13,8 +13,10 @@ export default function Footer () {
                 </div>
                 <div className="flex flex-col items-center px-20 text-white">
                     <p className="text-xl text-white">Kontakt:</p>
-                    <p className="text-sm mr-4">Nummer:</p>
-                    <p className="text-sm ml-7">070-000-00-00</p>
+                    <div className="flex flex-col items-start">
+                    <p className="text-sm ml-6">Telefon:</p>
+                    <p className="text-sm ml-6">073-392-1869</p>
+                    </div>
                 </div>
             </div>
         </footer>

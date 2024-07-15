@@ -19,7 +19,11 @@ const config = {
     },
     extend: {
       fontFamily: {
-        'cursive': ["Kaushan Script", "cursive"]
+        'cursive': ["Kaushan Script", "cursive"],
+        'static': ["Amatic SC", "static"],
+        'titan': ["Titan One", "titan"],
+        'calistoga': ["Calistoga", "calistoga"],
+        'cinzel': ["Cinzel Decorative", "cinzel"]
       },
       colors: {
         border: "hsl(var(--border))",
