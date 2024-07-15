@@ -8,7 +8,7 @@ export default async function AppLayout({
   }>) {
 
     return( 
-            <div className="flex flex-col " >
+            <div className="flex flex-col min-h-screen" >
                 <div className="w-full md:px-40">
                     <Navbar/>
                 </div>
