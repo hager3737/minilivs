@@ -19,8 +19,20 @@ export default function Catering () {
             email: formData.email,
             phoneNumber: formData.phoneNumber,
             order: formData.order
-        })
+        }),
+        onSuccess: () => {
+            setFormData({
+                fullName: "",
+                email: "",
+                phoneNumber: "",
+                order: ""
+            })
+        }
     })
+
+    
+        
+    
 
     const handleFormChange = (e: any) => {
         const { name, value } = e.target;
