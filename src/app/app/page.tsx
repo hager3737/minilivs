@@ -8,7 +8,7 @@ import Link from "next/link";
         return (
             <main className="flex flex-col md:flex md:flex-col-2 md:items-center md:gap-2">
                 <div className="flex justify-center pt-12 pb-4">
-                    <p className="text-md text-center font-bold p-1 border-y-2 border-red-500">Om oss!!</p>
+                    <p className="text-md text-center font-bold p-1 border-y-2 border-red-500">Om oss</p>
                     
                 </div>
                 <div className="flex flex-col md:flex md:flex-row items-center gap-8 pb-8 md:justify-between md:pb-12 border-b-2 border-black">
