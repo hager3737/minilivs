@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from 'nodemailer';
 
 
-export async function POST(request: NextRequest) {
+export async function POST (request: NextRequest) {
     const formData = await request.json();
   
     const email = process.env.EMAIL;
@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
       service: 'gmail',
       auth: {
         user: email,
-        pass,
+        pass
       },
     });
   
@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
       from: email,
       to: email,
       replyTo: formData.email,
-      subject: formData.fullName + formData.phoneNumber,
+      subject: formData.fullName + " " + formData.phoneNumber,
       text: formData.order,
       
     };
