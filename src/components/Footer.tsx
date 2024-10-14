@@ -4,8 +4,8 @@ export default function Footer () {
             <div className="grid grid-cols-3 items-center md:h-36 h-44 py-4 md:px-20 bg-pink-950">
                 <div className="flex flex-col items-center md:px-20 text-white">
                     <p className="text-xl">Öppettider:</p>
-                    <p className="text-sm mt-2">Vardagar: 08-20</p>
-                    <p className="text-sm md:mr-4">Helger: 09-18</p>
+                    <p className="text-sm mt-2 md:mr-2.5">Mån-Lör 08-20</p>
+                    <p className="text-sm">Söndagar: 09-18</p>
                 </div>
                 <div className="flex flex-col items-center md:px-20 text-white">
                     <p className="text-xl text-white mt-4 md:mt-0">Address:</p>
