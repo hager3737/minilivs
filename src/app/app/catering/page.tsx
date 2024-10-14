@@ -75,12 +75,20 @@ export default function Catering () {
                         <h4>Vad du önskar beställa:</h4>
                         <textarea name="order" value={formData.order} onChange={handleFormChange} className="border rounded-lg border-blue-900 px-4 h-20 w-[20rem] outline-none"/>
                     </div>
-                    {formData.fullName.trim() === '' || formData.fullName.length < 4 ||  formData.email.trim() === '' || formData.phoneNumber.trim() === '' || formData.order.trim() === '' ? 
-                        <button onClick={() => setShowing(true)} className="bg-red-600 p-1 rounded-lg">Skicka in!</button>
+                        {formData.fullName.trim() === '' ||
+                        formData.fullName.length < 4 ||
+                        formData.email.trim() === '' ||
+                        !formData.email.includes("@") ||
+                        formData.phoneNumber.trim() === '' ||
+                        formData.phoneNumber.length < 10 ||
+                        formData.phoneNumber.length > 10 ||
+                        formData.order.trim() === '' ||
+                        formData.order.length < 5
+                        ? 
+                    <button onClick={() => setShowing(true)} className="bg-red-600 p-1 rounded-lg">Skicka in!</button>
                     :
                     <button onClick={handleClick} className="bg-green-600 p-1 rounded-lg">Skicka in!</button>
-                    }
-                    
+                    }  
                 </div>
             </div>
         </div>

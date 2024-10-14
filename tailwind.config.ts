@@ -23,7 +23,8 @@ const config = {
         'static': ["Amatic SC", "static"],
         'titan': ["Titan One", "titan"],
         'calistoga': ["Calistoga", "calistoga"],
-        'cinzel': ["Cinzel Decorative", "cinzel"]
+        'cinzel': ["Cinzel", "cinzel"],
+        'philosopher': ["Philosopher", "philosopher"]
       },
       colors: {
         border: "hsl(var(--border))",
