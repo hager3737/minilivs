@@ -13,8 +13,9 @@ export async function POST (request: NextRequest) {
       service: 'gmail',
       auth: {
         user: email,
-        pass
+        pass: pass
       },
+      secure: true,
     });
   
     const mailOptions = {
