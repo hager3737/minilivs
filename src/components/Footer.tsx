@@ -1,7 +1,7 @@
 export default function Footer () {
     return(
         <footer className="relative bottom-0">
-            <div className="grid grid-cols-3 items-center md:h-36 h-44 py-4 md:px-20 bg-gradient-to-r from-blue-950 to-red-700">
+            <div className="grid grid-cols-3 items-center md:h-36 h-44 py-4 md:px-20 bg-pink-950">
                 <div className="flex flex-col items-center md:px-20 text-white">
                     <p className="text-xl">Öppettider:</p>
                     <p className="text-sm mt-2">Vardagar: 08-20</p>
